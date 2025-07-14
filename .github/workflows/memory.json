@@ -1,0 +1,564 @@
+{
+  "tasks": [
+    {
+      "date": "2025-07-13T14:35:39.960Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-13T14:33:03.648Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-13T14:31:34.397Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-13T14:29:02.797Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-13T13:21:44.747Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-13T09:18:30.240Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-13T09:12:30.296Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-13T09:12:08.042Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-13T08:42:10.948Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-12T21:20:49.738Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-12T17:52:33.909Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-12T13:56:13.015Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-12T13:31:13.558Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-12T13:16:06.889Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-11T21:52:06.500Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-11T21:49:29.556Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-11T21:47:08.673Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    },
+    {
+      "date": "2025-07-11T21:42:12.292Z",
+      "task": "auto: interlink all agents and sync",
+      "status": "pending"
+    }
+  ],
+  "aiComparisons": [
+    {
+      "date": "2025-07-13T14:35:39.984Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-13T14:33:03.674Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-13T14:31:34.420Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-13T14:29:02.825Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-13T13:21:44.803Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-13T09:18:30.267Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-13T09:12:30.326Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-13T09:12:08.091Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-13T08:42:11.041Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-12T21:20:49.781Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-12T17:52:33.939Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-12T13:56:13.042Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-12T13:31:13.588Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-12T13:16:06.911Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-11T21:52:06.536Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-11T21:49:29.583Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-11T21:47:08.717Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    },
+    {
+      "date": "2025-07-11T21:42:12.334Z",
+      "prompt": "סנכרן בין כל המודולים",
+      "results": [
+        {
+          "ai": "OpenAI",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Claude",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Bard",
+          "error": "window is not defined",
+          "success": false
+        },
+        {
+          "ai": "Huggingface",
+          "error": "window is not defined",
+          "success": false
+        }
+      ]
+    }
+  ]
+}
