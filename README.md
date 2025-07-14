@@ -1,5 +1,5 @@
 # TradrXBridge
 
-This repository contains a simple placeholder for the TradrXBridge website.
+This repository contains a simple placeholder interface for the TradrXBridge website.
 
-Open `index.html` in a web browser to view the site mockup.
+To preview the site, open `index.html` in a web browser. It uses `style.css` for styling and `script.js` for basic interactivity. No build step or additional dependencies are required.
