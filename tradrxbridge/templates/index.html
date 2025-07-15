@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TradrXBridge</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 2em; }
+#trades, #positions { margin-top: 1em; }
+</style>
+</head>
+<body>
+<h1>TradrXBridge</h1>
+<form id="trade-form">
+  <label>Symbol <input type="text" id="symbol" required></label>
+  <label>Action
+    <select id="action">
+      <option value="buy">Buy</option>
+      <option value="sell">Sell</option>
+    </select>
+  </label>
+  <label>Quantity <input type="number" id="quantity" step="any" required></label>
+  <label>Price <input type="number" id="price" step="any" required></label>
+  <button type="submit">Submit</button>
+</form>
+
+<h2>Positions</h2>
+<pre id="positions"></pre>
+
+<h2>Trades</h2>
+<pre id="trades"></pre>
+
+<script>
+async function fetchJson(url, options) {
+  const resp = await fetch(url, options);
+  if (!resp.ok) {
+    const text = await resp.text();
+    throw new Error(text || resp.statusText);
+  }
+  return resp.json();
+}
+
+async function load() {
+  document.getElementById('positions').textContent = JSON.stringify(
+    await fetchJson('/positions'), null, 2
+  );
+  document.getElementById('trades').textContent = JSON.stringify(
+    await fetchJson('/trades'), null, 2
+  );
+}
+
+document.getElementById('trade-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  try {
+    const data = {
+      symbol: document.getElementById('symbol').value,
+      action: document.getElementById('action').value,
+      quantity: parseFloat(document.getElementById('quantity').value),
+      price: parseFloat(document.getElementById('price').value)
+    };
+    await fetchJson('/trade', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    await load();
+  } catch (err) {
+    alert('Error: ' + err.message);
+  }
+});
+
+load();
+</script>
+</body>
+</html>
