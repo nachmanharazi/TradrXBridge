@@ -3,44 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradrXBridge</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7fa;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header, footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #2d3436;
-            color: #ecf0f1;
-        }
-        main {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-    </style>
+    <title>TradrXBridge - Professional Trading Platform</title>
+    <meta name="description" content="Advanced trading bridge platform for seamless cryptocurrency and forex trading across multiple exchanges">
+    <meta name="keywords" content="trading, cryptocurrency, forex, bridge, exchange, portfolio, fintech, bitcoin, ethereum">
+    <meta name="author" content="TradrXBridge Team">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="TradrXBridge - Professional Trading Platform">
+    <meta property="og:description" content="Advanced trading bridge platform for seamless cryptocurrency and forex trading across multiple exchanges">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-username.github.io/tradrxbridge">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TradrXBridge - Professional Trading Platform">
+    <meta name="twitter:description" content="Advanced trading bridge platform for seamless cryptocurrency and forex trading">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💹</text></svg>">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Welcome to TradrXBridge</h1>
-        </header>
-        <main>
-            <p>This is a simple placeholder screen for the trading bridge website.</p>
-        </main>
-        <footer>
-            <p>&copy; 2023 TradrXBridge</p>
-        </footer>
-    </div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">TradrXBridge</a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#dashboard" aria-label="Go to Dashboard">Dashboard</a></li>
+                        <li><a href="#trading-controls" aria-label="Go to Trading">Trading</a></li>
+                        <li><a href="#portfolio" aria-label="Go to Portfolio">Portfolio</a></li>
+                        <li><a href="#settings" aria-label="Go to Settings">Settings</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Professional Trading Bridge</h1>
+                <p>Connect multiple exchanges, execute trades seamlessly, and manage your portfolio with advanced tools</p>
+                <a href="#dashboard" class="cta-button" aria-label="Start trading on the platform">Start Trading</a>
+            </div>
+        </section>
+
+        <!-- Trading Dashboard -->
+        <section id="dashboard" class="container">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h2 class="dashboard-title">Trading Dashboard</h2>
+                    <div class="status-indicator" id="connection-status" role="status" aria-live="polite">
+                        <div class="status-dot" aria-hidden="true"></div>
+                        <span>Ready to Connect</span>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="bridge-controls">
+                        <div class="control-group">
+                            <button id="connect-bridge" class="control-button" aria-describedby="connection-status">Connect Bridge</button>
+                            <button id="disconnect-bridge" class="control-button danger disconnect-hidden" aria-describedby="connection-status">Disconnect Bridge</button>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Portfolio Balance</label>
+                            <div class="price-display" id="portfolio-balance">$25,000.00</div>
+                        </div>
+                        <div class="control-group">
+                            <button id="refresh-portfolio" class="control-button">Refresh Portfolio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trading Pairs -->
+        <section class="container">
+            <h2 class="text-center mb-3">Live Market Prices</h2>
+            <div id="trading-pairs" class="trading-grid">
+                <!-- Trading pairs will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Trading Controls -->
+        <section id="trading-controls" class="container">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h2 class="dashboard-title">Execute Trade</h2>
+                </div>
+                <div class="dashboard-content">
+                    <form id="trading-form">
+                        <div class="bridge-controls">
+                            <div class="control-group">
+                                <label for="trading-pair" class="control-label">Trading Pair</label>
+                                <select id="trading-pair" name="pair" class="control-input" required aria-describedby="pair-help">
+                                    <option value="">Select a pair</option>
+                                    <option value="BTC/USDT">BTC/USDT</option>
+                                    <option value="ETH/USDT">ETH/USDT</option>
+                                    <option value="BNB/USDT">BNB/USDT</option>
+                                    <option value="ADA/USDT">ADA/USDT</option>
+                                    <option value="SOL/USDT">SOL/USDT</option>
+                                    <option value="XRP/USDT">XRP/USDT</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label for="trade-type" class="control-label">Order Type</label>
+                                <select id="trade-type" name="type" class="control-input" required>
+                                    <option value="buy">Buy</option>
+                                    <option value="sell">Sell</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label for="trade-amount" class="control-label">Amount</label>
+                                <input type="number" id="trade-amount" name="amount" class="control-input" 
+                                       placeholder="0.00" step="0.00000001" min="0" required>
+                            </div>
+                            <div class="control-group">
+                                <label for="trade-price" class="control-label">Price (USDT)</label>
+                                <input type="number" id="trade-price" name="price" class="control-input" 
+                                       placeholder="0.00" step="0.01" min="0" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="control-button" aria-describedby="trade-help">Execute Trade</button>
+                        <div id="trade-help" class="sr-only">Execute your trading order with the selected parameters</div>
+                        <div id="pair-help" class="sr-only">Choose the cryptocurrency trading pair you want to trade</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="container">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h2 class="dashboard-title">Recent Orders</h2>
+                </div>
+                <div class="dashboard-content">
+                    <div id="recent-orders">
+                        <p class="text-center">No recent orders</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Configuration Section -->
+        <section id="settings" class="container">
+            <div class="dashboard">
+                <div class="dashboard-header">
+                    <h2 class="dashboard-title">API Configuration</h2>
+                </div>
+                <div class="dashboard-content">
+                    <div class="bridge-controls">
+                        <div class="control-group">
+                            <h3>Binance API Keys</h3>
+                            <label for="binance-api-key" class="control-label">API Key</label>
+                            <input type="password" id="binance-api-key" class="control-input" placeholder="Enter Binance API Key">
+                            <label for="binance-secret-key" class="control-label">Secret Key</label>
+                            <input type="password" id="binance-secret-key" class="control-input" placeholder="Enter Binance Secret Key">
+                            <button id="save-binance-keys" class="control-button">Save Binance Keys</button>
+                        </div>
+                        <div class="control-group">
+                            <h3>Integration Status</h3>
+                            <div id="integration-status">
+                                <p>Loading integration status...</p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <h3>Security Actions</h3>
+                            <button id="clear-all-keys" class="control-button danger">Clear All API Keys</button>
+                            <button id="export-settings" class="control-button">Export Settings</button>
+                            <button id="import-settings" class="control-button">Import Settings</button>
+                            <input type="file" id="settings-file" accept=".json" class="settings-file-input" aria-label="Import settings file">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TradrXBridge</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Trading</h3>
+                    <ul>
+                        <li><a href="#exchanges">Supported Exchanges</a></li>
+                        <li><a href="#api">API Documentation</a></li>
+                        <li><a href="#security">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy; 2025 TradrXBridge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/integrations.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
