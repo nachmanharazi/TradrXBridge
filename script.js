@@ -6,14 +6,12 @@ const animateCount = (element) => {
         return;
     }
 
-    const duration = 1400;
+    const duration = 1200;
     const startTime = performance.now();
 
-    const update = (currentTime) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(1, elapsed / duration);
-        const eased = easeOutQuad(progress);
-        const value = Math.round(eased * target);
+    const update = (now) => {
+        const progress = Math.min(1, (now - startTime) / duration);
+        const value = Math.round(easeOutQuad(progress) * target);
         element.textContent = value.toString();
 
         if (progress < 1) {
@@ -26,33 +24,23 @@ const animateCount = (element) => {
     requestAnimationFrame(update);
 };
 
-const initInViewAnimations = () => {
-    const animatedElements = document.querySelectorAll('[data-animate]');
-    if (!animatedElements.length) {
-        return;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
+const revealOnScroll = () => {
+    const animated = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                const value = entry.target.querySelector('[data-count-to]');
-                if (value) {
-                    animateCount(value);
-                }
+                obs.unobserve(entry.target);
             }
         });
-    }, {
-        rootMargin: '0px 0px -10% 0px',
-        threshold: 0.2,
-    });
+    }, { threshold: 0.25 });
 
-    animatedElements.forEach((element) => observer.observe(element));
+    animated.forEach((element) => observer.observe(element));
 };
 
-const initCountUpPanels = () => {
-    const countTargets = document.querySelectorAll('[data-count-to]');
-    if (!countTargets.length) {
+const countOnView = () => {
+    const counters = document.querySelectorAll('[data-count-to]');
+    if (!counters.length) {
         return;
     }
 
@@ -63,65 +51,59 @@ const initCountUpPanels = () => {
                 obs.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.5,
-    });
+    }, { threshold: 0.6 });
 
-    countTargets.forEach((target) => observer.observe(target));
+    counters.forEach((counter) => observer.observe(counter));
 };
 
 const initSmoothScroll = () => {
-    const scrollButtons = document.querySelectorAll('a[href^="#"], [data-scroll-target]');
-
-    scrollButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-            const targetSelector = button.dataset.scrollTarget || button.getAttribute('href');
-            if (!targetSelector || targetSelector === '#') {
+    document.querySelectorAll('a[href^="#"], [data-scroll-target]').forEach((trigger) => {
+        trigger.addEventListener('click', (event) => {
+            const selector = trigger.dataset.scrollTarget || trigger.getAttribute('href');
+            if (!selector || selector === '#') {
                 return;
             }
 
-            const target = document.querySelector(targetSelector);
+            const target = document.querySelector(selector);
             if (!target) {
                 return;
             }
 
             event.preventDefault();
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-            const navList = document.querySelector('.site-nav__list');
-            const navToggle = document.querySelector('.site-nav__toggle');
-            if (navList?.classList.contains('is-open')) {
-                navList.classList.remove('is-open');
-                if (navToggle) {
-                    navToggle.setAttribute('aria-expanded', 'false');
-                }
-            }
+            closeMobileNav();
         });
     });
 };
 
-const initNavigation = () => {
-    const navToggle = document.querySelector('.site-nav__toggle');
-    const navList = document.querySelector('.site-nav__list');
+let closeMobileNav = () => {};
 
-    if (!navToggle || !navList) {
+const initNavigation = () => {
+    const toggle = document.querySelector('.site-nav__toggle');
+    const list = document.querySelector('.site-nav__list');
+
+    if (!toggle || !list) {
+        closeMobileNav = () => {};
         return;
     }
 
-    navToggle.addEventListener('click', () => {
-        const isOpen = navList.classList.toggle('is-open');
-        navToggle.setAttribute('aria-expanded', String(isOpen));
+    closeMobileNav = () => {
+        list.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', () => {
+        const isOpen = list.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
     });
 
     document.addEventListener('click', (event) => {
-        if (!navList.classList.contains('is-open')) {
+        if (!list.classList.contains('is-open')) {
             return;
         }
 
-        const isClickInside = navList.contains(event.target) || navToggle.contains(event.target);
-        if (!isClickInside) {
-            navList.classList.remove('is-open');
-            navToggle.setAttribute('aria-expanded', 'false');
+        if (!list.contains(event.target) && event.target !== toggle) {
+            closeMobileNav();
         }
     });
 };
@@ -132,50 +114,49 @@ const initContactForm = () => {
         return;
     }
 
+    const getField = (id) => ({
+        input: form.querySelector(id),
+        error: form.querySelector(`${id}Error`),
+    });
+
     const fields = {
-        name: {
-            input: form.querySelector('#name'),
-            error: form.querySelector('#nameError'),
-            validator: (value) => value.trim().length > 1,
-            message: 'Please share your full name.',
-        },
-        email: {
-            input: form.querySelector('#email'),
-            error: form.querySelector('#emailError'),
-            validator: (value) => /.+@.+\..+/.test(value),
-            message: 'Enter a valid work email.',
-        },
-        company: {
-            input: form.querySelector('#company'),
-            error: form.querySelector('#companyError'),
-            validator: (value) => value.trim().length > 1,
-            message: 'Your company name helps us customize the demo.',
-        },
-        message: {
-            input: form.querySelector('#message'),
-            error: form.querySelector('#messageError'),
-            validator: (value) => value.trim().length > 5,
-            message: 'Tell us a bit more so we can prepare relevant material.',
-        },
+        name: getField('#name'),
+        email: getField('#email'),
+        company: getField('#company'),
+        message: getField('#message'),
     };
 
-    const successMessage = form.querySelector('.form-success');
+    const success = form.querySelector('.form-success');
+
+    const validators = {
+        name: (value) => value.trim().length > 1,
+        email: (value) => /.+@.+\..+/.test(value),
+        company: (value) => value.trim().length > 1,
+        message: (value) => value.trim().length > 5,
+    };
+
+    const messages = {
+        name: 'Please share your full name.',
+        email: 'Enter a valid work email.',
+        company: 'Let us know where you trade from.',
+        message: 'Add a short note so we can prepare.',
+    };
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         let hasErrors = false;
 
-        Object.values(fields).forEach(({ input, error, validator, message }) => {
-            if (!input) {
+        Object.entries(fields).forEach(([key, { input, error }]) => {
+            if (!input || !error) {
                 return;
             }
 
-            const value = input.value || '';
-            const isValid = validator(value);
+            const value = input.value ?? '';
+            const isValid = validators[key](value);
 
             if (!isValid) {
                 hasErrors = true;
-                error.textContent = message;
+                error.textContent = messages[key];
                 input.setAttribute('aria-invalid', 'true');
             } else {
                 error.textContent = '';
@@ -183,8 +164,8 @@ const initContactForm = () => {
             }
         });
 
-        if (successMessage) {
-            successMessage.hidden = hasErrors;
+        if (success) {
+            success.hidden = hasErrors;
         }
 
         if (!hasErrors) {
@@ -194,17 +175,17 @@ const initContactForm = () => {
 };
 
 const setCurrentYear = () => {
-    const yearElement = document.getElementById('currentYear');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear().toString();
+    const year = document.getElementById('currentYear');
+    if (year) {
+        year.textContent = new Date().getFullYear().toString();
     }
 };
 
 const init = () => {
     initNavigation();
     initSmoothScroll();
-    initInViewAnimations();
-    initCountUpPanels();
+    revealOnScroll();
+    countOnView();
     initContactForm();
     setCurrentYear();
 };

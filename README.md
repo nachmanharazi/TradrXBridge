@@ -1,35 +1,36 @@
 # TradrXBridge
 
-A polished marketing site for the fictional TradrXBridge institutional trading platform. The experience highlights product capabilities, integrations, insights, and a demo request workflow.
+Marketing landing page for the fictional TradrXBridge institutional trading platform. The site introduces the product story, highlights quantifiable outcomes, and provides a validated request form for demos.
 
-## Features
+## Highlights
 
-- Hero section with animated metrics and clear calls to action
-- Detailed sections for vision, capabilities, workflow, integrations, research insights, and testimonials
-- Responsive navigation with mobile menu support and smooth scrolling between sections
-- Demo request form with client-side validation and accessible feedback messaging
-- Animated content reveals and count-up statistics triggered when elements enter the viewport
+- Hero section with animated metrics, dual call-to-action buttons, and quick value framing.
+- Platform, outcomes, workflow, and resource sections built with responsive cards and checklists.
+- Smooth-scrolling anchored navigation with a mobile menu and accessible skip link.
+- Demo request form with inline validation, success messaging, and semantic markup.
+- Viewport-triggered content reveals and data counters powered by the intersection observer API.
 
 ## Project structure
 
 ```
-index.html   # Page markup and content sections
-style.css    # Visual design, layout system, responsive behavior
-script.js    # Navigation, animation, metric counters, and form validation
+index.html   # Markup for all sections, navigation, and form
+style.css    # Visual system, layout primitives, responsive behavior
+script.js    # Navigation controls, smooth scroll, animations, form validation
+package.json # Metadata with placeholder npm script
 ```
 
 ## Getting started
 
 1. Clone the repository or download the source.
-2. Open `index.html` directly in a browser, or serve the folder via any static file server.
+2. Open `index.html` directly in a browser, or serve the folder with any static file server.
 
-## Scripts
+## Available scripts
 
-Install dependencies (none are required) and run the available npm script:
+No dependencies are required, but an npm script is provided for CI friendliness:
 
 ```bash
-npm install   # optional, no dependencies are declared
-npm test      # prints a message confirming that automated tests are not configured
+npm install   # optional – installs nothing but satisfies automated workflows
+npm test      # prints that automated tests are not configured for this static site
 ```
 
-Feel free to adapt the layout or hook the demo form into a backend service.
+You can tailor the content, styles, or form handling to integrate with production systems.

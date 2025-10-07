@@ -1,43 +1,36 @@
 # TradrXBridge environment overview
 
 ## Repository layout
-- `index.html` – multi-section marketing page with anchored navigation, hero metrics, feature grid, workflow timeline, integration cloud, insight cards, testimonials, and contact form.
-- `style.css` – design system including CSS variables, responsive grid utilities, animation keyframes, and form states.
-- `script.js` – client-side behaviors for navigation toggling, smooth scrolling, intersection-triggered animations, metric counters, and form validation.
-- `package.json` – metadata enabling the `npm test` script (currently a placeholder that reports no automated tests).
+- `index.html` – marketing page with hero, platform overview, outcome metrics, workflow, resources, and contact sections.
+- `style.css` – design system with color tokens, responsive grid utilities, cards, panels, and form styling.
+- `script.js` – client-side behaviors covering navigation toggling, smooth scrolling, viewport animations, counter effects, and form validation.
+- `package.json` – metadata that exposes the placeholder `npm test` script for CI compatibility.
 
-## Detailed section map
+## Section map
 ### index.html
-1. **Header & navigation** – skip link for accessibility, brand block, responsive navigation toggle, and call-to-action button anchoring to the contact section.
-2. **Hero** – marketing copy paired with animated latency/compliance/venue metrics.
-3. **Vision** – three-card feature grid describing unified router, surveillance, and audit records.
-4. **Capabilities** – alternating layout with checklist and KPI data panel that animates percentage counts.
-5. **Workflow** – ordered timeline covering ingest, decide, execute, and assure stages.
-6. **Integrations** – logo cloud listing supported venues and APIs.
-7. **Insights** – research highlights with cards for liquidity pulse, algo briefing, and compliance outlook plus supporting stats.
-8. **Testimonials** – quotes from client personas with attribution and roles.
-9. **Contact** – validated request form capturing contact details, trading focus, assets, AUM tier, and compliance agreement.
-10. **Footer** – persistent CTA, compliance copy, and dynamic copyright year.
+1. **Header & navigation** – sticky header with brand mark, anchored links, mobile toggle, and primary demo CTA.
+2. **Hero** – value positioning with animated latency/compliance/retention metrics and dual CTAs.
+3. **Platform** – feature cards describing routing, surveillance, and reporting capabilities.
+4. **Outcomes** – checklist describing benefits alongside animated KPI data panel.
+5. **Workflow** – lifecycle timeline covering ingest, decide, execute, and assure phases.
+6. **Resources** – insight cards and a downloadable toolkit list for market structure teams.
+7. **Contact** – validated demo request form paired with expectation-setting bullet list.
+8. **Footer** – supporting navigation links and dynamic copyright year.
 
 ### style.css highlights
-- **CSS variables** define color palette, typography scale, spacing, and transitions.
-- **Layout system** implements flexible containers, responsive grids, split layouts, and utility classes for sections.
-- **Interactive states** cover buttons, cards, timeline steps, logo cloud items, and form inputs with focus/hover feedback.
-- **Animations** include gradient hero backdrop, fade/slide reveals, count-up emphasis, and floating sparkles in hero metrics.
-- **Media queries** adjust typography, spacing, and layout stack for tablets and mobile devices, ensuring accessibility.
+- **CSS variables** set the palette, typography, spacing, shadows, and transition speeds.
+- **Layout primitives** include fluid containers, split grids, card styling, and timeline visuals.
+- **Interactive states** provide hover/focus feedback for buttons, cards, resource links, and timeline steps.
+- **Responsive rules** adjust spacing, stacking, and navigation behavior for tablets and small screens.
 
 ### script.js highlights
-- **Navigation control** toggles the mobile menu with proper `aria-expanded` handling and closes on outside focus.
-- **Smooth scrolling** powers anchor buttons and scroll-to-top interactions with offset handling.
-- **Intersection observers** trigger card reveals and hero metric counting once sections enter the viewport.
-- **Count-up utility** increments data values for metrics using `requestAnimationFrame` with easing.
-- **Form validation** checks required fields, email pattern, select and checkbox completion, rendering inline error messaging and success confirmations.
+- **Navigation control** toggles the mobile menu and closes it after navigation interactions.
+- **Smooth scrolling** animates anchor navigation and resource button behavior.
+- **Intersection observers** trigger reveal animations and metric counter updates when elements enter the viewport.
+- **Form validation** enforces required fields, email formatting, inline error messages, and success feedback.
+- **Utility helpers** include easing-based number animation and current-year footer injection.
 
-## Development workflow
-1. Open `index.html` in a browser (no build step required).
-2. For linting or automated tests, integrate additional tooling; `npm test` currently echoes that tests are not configured.
-
-## Notable improvements opportunities
-- Add automated accessibility auditing (e.g., Lighthouse, axe) to ensure ongoing compliance.
-- Bundle assets with a build pipeline to minify CSS/JS and optimize images.
-- Connect the contact form to a backend endpoint or service for actual demo requests.
+## Workflow tips
+1. Open `index.html` in any browser—no build step is required.
+2. Use `npm test` to satisfy CI checks; it prints that automated tests are not configured.
+3. Extend functionality by wiring the form to a backend service or integrating analytics.
