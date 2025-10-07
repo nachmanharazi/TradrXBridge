@@ -161,6 +161,96 @@ svg {
     background: var(--color-accent-soft);
 }
 
+.ghost-button--tight {
+    padding: 10px 18px;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+    text-decoration: underline;
+}
+
+body.is-modal-open {
+    overflow: hidden;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 9, 16, 0.78);
+}
+
+.modal__dialog {
+    position: relative;
+    width: min(520px, 100%);
+    background: var(--color-surface);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow-soft);
+}
+
+.modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal__content {
+    display: grid;
+    gap: 24px;
+}
+
+.modal__header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.modal__subtitle {
+    margin: 8px 0 0;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+.auth-panel form {
+    display: grid;
+    gap: 18px;
+}
+
+.modal__switch {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+
 .hero {
     padding: 120px 0 96px;
     position: relative;

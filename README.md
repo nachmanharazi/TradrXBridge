@@ -8,14 +8,15 @@ Marketing landing page for the fictional TradrXBridge institutional trading plat
 - Platform, outcomes, workflow, and resource sections built with responsive cards and checklists.
 - Smooth-scrolling anchored navigation with a mobile menu and accessible skip link.
 - Demo request form with inline validation, success messaging, and semantic markup.
+- Client sign-in modal with registration, local credential storage, and session-aware CTA copy.
 - Viewport-triggered content reveals and data counters powered by the intersection observer API.
 
 ## Project structure
 
 ```
-index.html   # Markup for all sections, navigation, and form
-style.css    # Visual system, layout primitives, responsive behavior
-script.js    # Navigation controls, smooth scroll, animations, form validation
+index.html   # Markup for all sections, navigation, auth modal, and form
+style.css    # Visual system, layout primitives, modal styling, responsive behavior
+script.js    # Navigation controls, smooth scroll, animations, auth + form validation
 package.json # Metadata with placeholder npm script
 ```
 
@@ -33,4 +34,5 @@ npm install   # optional – installs nothing but satisfies automated workflows
 npm test      # prints that automated tests are not configured for this static site
 ```
 
-You can tailor the content, styles, or form handling to integrate with production systems.
+You can tailor the content, styles, or form handling to integrate with production systems. The client sign-in flow stores credentia
+ls in `localStorage` for demo purposes; wire it up to your identity provider for production.
