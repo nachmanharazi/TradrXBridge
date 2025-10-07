@@ -1,0 +1,9 @@
+{
+  "name": "tradrxbridge",
+  "version": "1.0.0",
+  "description": "Marketing landing page for the TradrXBridge institutional trading platform.",
+  "private": true,
+  "scripts": {
+    "test": "echo 'Static site: no automated tests configured.'"
+  }
+}
