@@ -3,30 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradrXBridge</title>
+    <meta name="description" content="TradrXBridge connects trading desks with compliant automation, analytics, and integrations.">
+    <title>TradrXBridge | Institutional Trading Platform</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Welcome to TradrXBridge</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <div class="brand" aria-label="TradrXBridge">
+                <span class="brand__icon" aria-hidden="true">TX</span>
+                <span class="brand__name">TradrXBridge</span>
+            </div>
+            <nav class="site-nav" aria-label="Primary">
+                <button class="site-nav__toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+                <ul class="site-nav__list" id="navMenu">
+                    <li><a href="#platform">Platform</a></li>
+                    <li><a href="#metrics">Outcomes</a></li>
+                    <li><a href="#workflow">Workflow</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-        </header>
-        <main>
-            <p>This is a simple placeholder screen for the trading bridge website.</p>
-            <button id="infoButton">Click me</button>
-            <p id="info"></p>
-        </main>
-        <footer>
-            <p>&copy; 2023 TradrXBridge</p>
-        </footer>
+            <button class="ghost-button ghost-button--tight" id="accountButton" data-auth-action="open">Client sign in</button>
+            <a class="cta-button" href="#contact">Book a demo</a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero__content">
+                <div class="hero__copy">
+                    <p class="hero__eyebrow">Execution. Oversight. Compliance.</p>
+                    <h1 id="hero-title">One bridge for every institutional trade</h1>
+                    <p class="hero__description">TradrXBridge unifies fragmented liquidity, algorithmic execution, and end-to-end surveillance so global desks can act quickly without compromising on governance.</p>
+                    <div class="hero__actions">
+                        <a class="cta-button" href="#platform">Explore the platform</a>
+                        <button class="ghost-button" data-scroll-target="#resources">Download the brief</button>
+                    </div>
+                </div>
+                <div class="hero__panel" aria-label="Key platform metrics">
+                    <dl>
+                        <div>
+                            <dt>Latency across venues</dt>
+                            <dd><span data-count-to="32">0</span> ms</dd>
+                        </div>
+                        <div>
+                            <dt>Automated compliance tasks</dt>
+                            <dd><span data-count-to="88">0</span>%</dd>
+                        </div>
+                        <div>
+                            <dt>Client retention</dt>
+                            <dd><span data-count-to="96">0</span>%</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="platform" aria-labelledby="platform-title">
+            <div class="container">
+                <h2 id="platform-title">Everything your desk needs in a single view</h2>
+                <p class="section__lead">Purpose-built components help execution teams collaborate across asset classes while staying inside risk guardrails.</p>
+                <div class="feature-grid">
+                    <article class="card" data-animate>
+                        <h3>Adaptive order routing</h3>
+                        <p>Blend algorithmic and trader-managed routes with configurable safeguards for every venue.</p>
+                    </article>
+                    <article class="card" data-animate>
+                        <h3>Real-time surveillance</h3>
+                        <p>Surface anomalies across chat, voice, and electronic channels using contextual machine learning.</p>
+                    </article>
+                    <article class="card" data-animate>
+                        <h3>Regulatory reporting</h3>
+                        <p>Generate attestations automatically with traceable audit trails and immutable evidence.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="metrics" aria-labelledby="metrics-title">
+            <div class="container split">
+                <div>
+                    <h2 id="metrics-title">Quantifiable impact from day one</h2>
+                    <ul class="checked-list">
+                        <li>Accelerate onboarding with pre-built integrations for major EMS, OMS, and liquidity venues.</li>
+                        <li>Reduce manual exception handling through intelligent alerting and guided playbooks.</li>
+                        <li>Give compliance teams instant oversight with configurable policies and sign-offs.</li>
+                    </ul>
+                </div>
+                <div class="data-panel" aria-label="Performance outcomes">
+                    <dl>
+                        <div>
+                            <dt>Time-to-fill improvement</dt>
+                            <dd><span data-count-to="27">0</span>%</dd>
+                        </div>
+                        <div>
+                            <dt>Manual steps removed</dt>
+                            <dd><span data-count-to="61">0</span>%</dd>
+                        </div>
+                        <div>
+                            <dt>Audit preparation time</dt>
+                            <dd><span data-count-to="45">0</span>% faster</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="workflow" aria-labelledby="workflow-title">
+            <div class="container">
+                <h2 id="workflow-title">Designed for the entire trade lifecycle</h2>
+                <ol class="timeline">
+                    <li data-animate>
+                        <h3>Ingest</h3>
+                        <p>Connect FIX, proprietary feeds, and research data with zero downtime adapters.</p>
+                    </li>
+                    <li data-animate>
+                        <h3>Decide</h3>
+                        <p>Optimize execution with model-driven insights, trader overrides, and scenario testing.</p>
+                    </li>
+                    <li data-animate>
+                        <h3>Execute</h3>
+                        <p>Route across venues with deterministic fallbacks, fill transparency, and compliance guardrails.</p>
+                    </li>
+                    <li data-animate>
+                        <h3>Assure</h3>
+                        <p>Automate surveillance, reporting, and attestation workflows for every jurisdiction.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="resources" aria-labelledby="resources-title">
+            <div class="container split">
+                <div>
+                    <h2 id="resources-title">Insights for trading leaders</h2>
+                    <p class="section__lead">Stay ahead with curated guidance from our market structure research team.</p>
+                    <div class="insight-list">
+                        <article class="insight-card" data-animate>
+                            <h3>Liquidity pulse</h3>
+                            <p>Weekly breakdown of fixed-income venues with actionable spread forecasts.</p>
+                        </article>
+                        <article class="insight-card" data-animate>
+                            <h3>Regulatory radar</h3>
+                            <p>Digest upcoming mandates with impact assessments and recommended actions.</p>
+                        </article>
+                        <article class="insight-card" data-animate>
+                            <h3>Desk benchmark</h3>
+                            <p>Compare productivity metrics against peers and highlight automation opportunities.</p>
+                        </article>
+                    </div>
+                </div>
+                <aside class="resource-panel" aria-label="Download resources">
+                    <h3>Resource toolkit</h3>
+                    <ul>
+                        <li><a href="#">MiFID II readiness checklist</a></li>
+                        <li><a href="#">Sell-side automation playbook</a></li>
+                        <li><a href="#">Voice trade compliance guide</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" id="contact" aria-labelledby="contact-title">
+            <div class="container split">
+                <div>
+                    <h2 id="contact-title">Schedule a tailored walkthrough</h2>
+                    <p class="section__lead">Share a few details and our team will reach out within one business day.</p>
+                    <ul class="checked-list">
+                        <li>Live environment demo with your asset focus.</li>
+                        <li>Migration roadmap aligned to existing tooling.</li>
+                        <li>Security and compliance documentation bundle.</li>
+                    </ul>
+                </div>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                        <p class="form-error" id="nameError" aria-live="polite"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Work email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                        <p class="form-error" id="emailError" aria-live="polite"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input id="company" name="company" type="text" autocomplete="organization" required>
+                        <p class="form-error" id="companyError" aria-live="polite"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <p class="form-error" id="messageError" aria-live="polite"></p>
+                    </div>
+                    <button type="submit" class="cta-button">Request demo</button>
+                    <p class="form-success" hidden role="status">Thanks for reaching out. We will be in touch shortly.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authTitle" hidden>
+        <div class="modal__overlay" data-auth-action="close" aria-hidden="true"></div>
+        <div class="modal__dialog" role="document">
+            <button class="modal__close" type="button" aria-label="Close sign-in dialog" data-auth-action="close">&times;</button>
+            <div class="modal__content" data-auth-mode="signin">
+                <header class="modal__header">
+                    <h2 id="authTitle">Access your TradrXBridge workspace</h2>
+                    <p class="modal__subtitle">Sign in to review insights, saved workflows, and governance checkpoints.</p>
+                </header>
+                <section class="auth-panel" data-auth-panel="signin">
+                    <form id="signInForm" novalidate>
+                        <div class="form-group">
+                            <label for="signInEmail">Work email</label>
+                            <input id="signInEmail" name="email" type="email" autocomplete="email" required>
+                            <p class="form-error" id="signInEmailError" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="signInPassword">Password</label>
+                            <input id="signInPassword" name="password" type="password" autocomplete="current-password" required>
+                            <p class="form-error" id="signInPasswordError" aria-live="polite"></p>
+                        </div>
+                        <button type="submit" class="cta-button">Sign in</button>
+                        <p class="form-success" id="signInSuccess" hidden role="status"></p>
+                        <p class="modal__switch">New to TradrXBridge? <button type="button" class="link-button" data-auth-switch="signup">Create an account</button></p>
+                    </form>
+                </section>
+                <section class="auth-panel" data-auth-panel="signup" hidden>
+                    <form id="signUpForm" novalidate>
+                        <div class="form-group">
+                            <label for="signUpName">Full name</label>
+                            <input id="signUpName" name="name" type="text" autocomplete="name" required>
+                            <p class="form-error" id="signUpNameError" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="signUpEmail">Work email</label>
+                            <input id="signUpEmail" name="email" type="email" autocomplete="email" required>
+                            <p class="form-error" id="signUpEmailError" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="signUpPassword">Password</label>
+                            <input id="signUpPassword" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                            <p class="form-error" id="signUpPasswordError" aria-live="polite"></p>
+                        </div>
+                        <button type="submit" class="cta-button">Create account</button>
+                        <p class="form-success" id="signUpSuccess" hidden role="status"></p>
+                        <p class="modal__switch">Already registered? <button type="button" class="link-button" data-auth-switch="signin">Sign in instead</button></p>
+                    </form>
+                </section>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>&copy; <span id="currentYear"></span> TradrXBridge. All rights reserved.</p>
+            <nav aria-label="Secondary">
+                <a href="#platform">Platform</a>
+                <a href="#resources">Resources</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
