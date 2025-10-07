@@ -7,26 +7,102 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Welcome to TradrXBridge</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+    <header class="hero">
+        <div class="container hero__content">
+            <p class="hero__eyebrow">Capital markets infrastructure</p>
+            <h1 class="hero__title">Bridge traditional finance with algorithmic trading in real time.</h1>
+            <p class="hero__subtitle">TradrXBridge provides a secure, compliant way to connect institutional desks, quant teams, and digital asset venues with a single unified workflow.</p>
+            <div class="hero__actions">
+                <a class="button button--primary" href="#contact">Request a demo</a>
+                <button class="button button--ghost" id="learnMoreButton" type="button">Learn more</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section" id="about">
+            <div class="container section__layout">
+                <div class="section__intro">
+                    <h2>Built for execution teams</h2>
+                    <p>From pre-trade analytics to post-trade settlement, TradrXBridge orchestrates every step. Use our modular toolkit to plug into legacy systems while unlocking digital asset liquidity.</p>
+                </div>
+                <dl class="highlights" data-features>
+                    <!-- Populated by script.js -->
+                </dl>
+            </div>
+        </section>
+
+        <section class="section section--accent" id="workflow">
+            <div class="container">
+                <h2>Institutional workflow without the frictions</h2>
+                <ol class="workflow">
+                    <li class="workflow__step">
+                        <span class="workflow__badge">1</span>
+                        <div>
+                            <h3>Intake &amp; validation</h3>
+                            <p>Automate onboarding, KYC, and policy routing with configurable rule sets so your team can focus on strategy.</p>
+                        </div>
+                    </li>
+                    <li class="workflow__step">
+                        <span class="workflow__badge">2</span>
+                        <div>
+                            <h3>Smart order routing</h3>
+                            <p>Stream trades to multiple venues with latency-sensitive routing backed by live market intelligence.</p>
+                        </div>
+                    </li>
+                    <li class="workflow__step">
+                        <span class="workflow__badge">3</span>
+                        <div>
+                            <h3>Clearing &amp; reporting</h3>
+                            <p>Consolidated reconciliation, audit-ready exports, and automated counterparty notifications keep you compliant.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section" id="insights">
+            <div class="container section__layout section__layout--reverse">
+                <div class="section__intro">
+                    <h2>What clients are seeing</h2>
+                    <p class="quote">“The Bridge made our cross-venue execution seamless. Our traders can price, route, and settle without switching tools.”</p>
+                    <p class="quote__attribution">— Director of Digital Assets, Global Investment Bank</p>
+                </div>
+                <ul class="metrics" id="metrics">
+                    <!-- Populated by script.js -->
                 </ul>
-            </nav>
-        </header>
-        <main>
-            <p>This is a simple placeholder screen for the trading bridge website.</p>
-            <button id="infoButton">Click me</button>
-            <p id="info"></p>
-        </main>
-        <footer>
-            <p>&copy; 2023 TradrXBridge</p>
-        </footer>
-    </div>
+            </div>
+        </section>
+
+        <section class="section section--dark" id="contact">
+            <div class="container contact">
+                <div>
+                    <h2>Let’s align on your roadmap</h2>
+                    <p>Share your use case and we’ll map out the integrations, data feeds, and compliance checks you need to go live quickly.</p>
+                </div>
+                <form class="contact__form" aria-label="Contact form">
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="name" placeholder="Jane Doe" required>
+                    </label>
+                    <label>
+                        <span>Work email</span>
+                        <input type="email" name="email" placeholder="name@firm.com" required>
+                    </label>
+                    <label>
+                        <span>Message</span>
+                        <textarea name="message" rows="3" placeholder="Tell us about your trading objectives"></textarea>
+                    </label>
+                    <button class="button button--primary" type="submit">Submit inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer__layout">
+            <p>&copy; <span id="currentYear"></span> TradrXBridge. All rights reserved.</p>
+            <button class="button button--ghost footer__to-top" id="toTopButton" type="button">Back to top</button>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
